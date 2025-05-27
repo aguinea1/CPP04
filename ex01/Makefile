@@ -2,7 +2,7 @@
 #                              CONFIGURATION                                   #
 ################################################################################
 
-NAME			= 🅟🅞🅛🅨🅜🅞🅡🅟🅗🅘🅢🅜
+NAME			= 🄵🄸🅁🄴
 CC				= c++
 CFLAGS = -Wall -Wextra -Werror -Wno-shadow -std=c++98 -MMD
 DEPFLAGS		= -MMD -MF $(DEPDIR)/$*.d
@@ -18,15 +18,11 @@ DEPDIR			= deps
 SRCS = main.cpp	\
 	   Animal.cpp\
 	   Cat.cpp \
-	   Dog.cpp	\
-	   WrongCat.cpp \
-	   WrongAnimal.cpp
+	   Dog.cpp
 
 HEADERS = Animal.hpp \
 		  Cat.hpp	\
-		  Dog.hpp	\
-		  WrongCat.hpp	\
-		  WrongAnimal.hpp
+		  Dog.hpp
 ################################################################################
 #                             OBJECTS & DEPS                                   #
 ################################################################################
@@ -42,7 +38,7 @@ all: dir $(NAME)
 
 $(NAME): Makefile $(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) -o $@
-	@echo "\033[1;32m ➜ ➜ CPP04 EX00 [✔]\033[0m"
+	@echo "\033[1;32m ➜ ➜ CPP00 EX01 [✔]\033[0m"
 
 
 $(OBJDIR)/%.o: %.cpp $(HEADERS)
