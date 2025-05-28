@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aguinea <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/27 12:38:54 by aguinea           #+#    #+#             */
-/*   Updated: 2025/05/28 16:49:03 by aguinea          ###   ########.fr       */
+/*   Created: 2025/05/27 14:01:05 by aguinea           #+#    #+#             */
+/*   Updated: 2025/05/27 14:04:54 by aguinea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef Brain_HPP
-# define Brain_HPP
-# include <iostream>
-# include <new>
-# include <string>
-
-class Brain
+#include "WrongCat.hpp"
+WrongCat::WrongCat()
+    : WrongAnimal("WrongCat")
 {
-	private:
-		std::string idea[100];
-	public:
-		    Brain();
-			~Brain();
-			Brain(const Brain& other);
-			Brain& operator=(const Brain& other);
-			void setIdea(int i, const std::string& idea);
-			std::string getIdea(int i) const;
-};
-#endif
+    std::cout << "WrongCat has been created" << std::endl;
+}
+WrongCat::~WrongCat() 
+{
+    std::cout << "WrongCat has been destroyed" << std::endl;
+}
+
+void WrongCat::makeSound() const
+{
+	std::cout << "w̶r̶o̶n̶g̶  🅜🅘🅐🅤🅤🅤🅤🅤🅤 " << std::endl;
+}
+
 
