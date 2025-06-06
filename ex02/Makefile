@@ -44,7 +44,7 @@ all: dir $(NAME)
 
 $(NAME): Makefile $(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) -o $@
-	@echo "\033[1;32m ➜ ➜ CPP04 EX01 [✔]\033[0m"
+	@echo "\033[1;32m ➜ ➜ CPP04 EX02 [✔]\033[0m"
 
 
 $(OBJDIR)/%.o: %.cpp $(HEADERS)
